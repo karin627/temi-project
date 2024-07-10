@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/activity2">
+
+    <activity
+        android:id="@+id/activity2"
+        android:name="com.example.temiapp.Activity2"
+        android:label="activity_2"
+        tools:layout="@layout/activity_2" />
+    <activity
+        android:id="@+id/activity3"
+        android:name="com.example.temiapp.Activity3"
+        android:label="activity_3"
+        tools:layout="@layout/activity_3" />
+    <activity
+        android:id="@+id/activity4"
+        android:name="com.example.temiapp.Activity4"
+        android:label="activity_4"
+        tools:layout="@layout/activity_4" />
+    <activity
+        android:id="@+id/activity5"
+        android:name="com.example.temiapp.Activity5"
+        android:label="activity_5"
+        tools:layout="@layout/activity_5" />
+    <activity
+        android:id="@+id/activity6"
+        android:name="com.example.temiapp.Activity6"
+        android:label="activity_6"
+        tools:layout="@layout/activity_6" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.temiapp.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/intro"
+        android:name="com.example.temiapp.Intro"
+        android:label="activity_intro"
+        tools:layout="@layout/activity_intro" />
+    <activity
+        android:id="@+id/guide"
+        android:name="com.example.temiapp.Guide"
+        android:label="activity_guide"
+        tools:layout="@layout/activity_guide" />
+    <activity
+        android:id="@+id/activity7"
+        android:name="com.example.temiapp.Activity7"
+        android:label="activity_7"
+        tools:layout="@layout/activity_7" />
+    <activity
+        android:id="@+id/activity8"
+        android:name="com.example.temiapp.Activity8"
+        android:label="activity_8"
+        tools:layout="@layout/activity_8" />
+</navigation>
