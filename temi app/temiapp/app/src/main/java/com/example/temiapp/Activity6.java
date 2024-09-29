@@ -1,5 +1,5 @@
 package com.example.temiapp;
-
+// continue or end?
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,27 +9,38 @@ import android.view.View;
 import android.widget.Button;
 
 import com.robotemi.sdk.Robot;
-import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener;
 import com.robotemi.sdk.listeners.OnRobotReadyListener;
 import com.robotemi.sdk.TtsRequest;
-import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener;
 
-public class Activity10 extends AppCompatActivity implements OnRobotReadyListener, OnGoToLocationStatusChangedListener {
-    private static final String TAG = Activity10.class.getSimpleName();
-    Button enterBtn;
+public class Activity6 extends AppCompatActivity implements OnRobotReadyListener {
+
+    private static final String TAG = Activity6.class.getSimpleName();
     Robot mRobot;
-
+    Button nextBtn;
+    Button endBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_10);
+        setContentView(R.layout.activity_6);
+        nextBtn = (Button)findViewById(R.id.nextBtn);
+        endBtn = (Button)findViewById(R.id.endBtn);
+
+        Bundle bundle = this.getIntent().getExtras();
         mRobot = Robot.getInstance();
-        enterBtn = (Button) findViewById(R.id.button_tenth);
-        enterBtn.setOnClickListener(new View.OnClickListener() {
+        mRobot.speak(TtsRequest.create("掰掰，期待下次再與你聊天", false, TtsRequest.Language.ZH_TW, false));
+        nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity10.this, Activity5.class);
+                Intent intent = new Intent(Activity6.this, Activity7.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+        endBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity6.this, Activity5.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +52,7 @@ public class Activity10 extends AppCompatActivity implements OnRobotReadyListene
 
         // Add robot event listeners
         mRobot.addOnRobotReadyListener(this);
-        mRobot.addOnGoToLocationStatusChangedListener(this);
+//        mRobot.addOnCurrentPositionChangedListener(this);
     }
 
     @Override
@@ -50,7 +61,7 @@ public class Activity10 extends AppCompatActivity implements OnRobotReadyListene
 
         // Remove robot event listeners
         mRobot.removeOnRobotReadyListener(this);
-        mRobot.removeOnGoToLocationStatusChangedListener(this);
+//        mRobot.removeOnCurrentPositionChangedListener(this);
     }
 
     @Override
@@ -58,13 +69,6 @@ public class Activity10 extends AppCompatActivity implements OnRobotReadyListene
         if (isReady) {
             Log.i(TAG, "Robot is ready");
             mRobot.hideTopBar(); // hide temi's ActionBar when skill is active
-        }
-    }
-
-    @Override
-    public void onGoToLocationStatusChanged(String location, String status, int descriptionId, String description) {
-        if (descriptionId == 500) {
-            mRobot.speak(TtsRequest.create("已到達領藥處，請抽號碼牌領藥", false, TtsRequest.Language.ZH_TW, false));
         }
     }
 }

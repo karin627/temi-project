@@ -1,5 +1,5 @@
 package com.example.temiapp;
-
+// press start button to start the guide
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,7 +42,7 @@ public class Activity8 extends AppCompatActivity implements OnRobotReadyListener
                     startActivity(intent);
                 }
                 else{
-                    mRobot.goTo("骨科診間", false, null, SpeedLevel.SLOW);
+                    mRobot.goTo("診間", false, null, SpeedLevel.SLOW);
                     Intent intent = new Intent(Activity8.this, Activity4.class);
                     intent.putExtras(bundle);
                     startActivity(intent);

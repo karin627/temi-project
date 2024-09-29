@@ -1,5 +1,5 @@
 package com.example.temiapp
-
+// start chatting
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat

@@ -117,7 +117,7 @@ class EnterSymptomWhisper : AppCompatActivity(), OnRobotReadyListener {
                 labelStatus.setText("請先按下錄音鍵錄下症狀")
             }else{
                 Thread{
-                    val serverAddress = "192.168.50.169"
+                    val serverAddress = "192.168.238.31"
                     val serverPort = 5000
                     try{
                         val socket = Socket(serverAddress, serverPort)
