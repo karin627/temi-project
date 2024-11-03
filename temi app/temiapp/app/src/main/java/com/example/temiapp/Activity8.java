@@ -34,7 +34,7 @@ public class Activity8 extends AppCompatActivity implements OnRobotReadyListener
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mRobot.goTo("骨科診間", false, null, SpeedLevel.SLOW);
+//              mRobot.goTo("骨科診間", false, null, SpeedLevel.SLOW);
                 if(destination.equals("領藥處")){
                     mRobot.goTo("領藥處", false, null, SpeedLevel.SLOW);
                     Intent intent = new Intent(Activity8.this, Activity10.class);
@@ -42,7 +42,7 @@ public class Activity8 extends AppCompatActivity implements OnRobotReadyListener
                     startActivity(intent);
                 }
                 else{
-                    mRobot.goTo("診間", false, null, SpeedLevel.SLOW);
+                    mRobot.goTo("骨科診間", false, null, SpeedLevel.SLOW);
                     Intent intent = new Intent(Activity8.this, Activity4.class);
                     intent.putExtras(bundle);
                     startActivity(intent);

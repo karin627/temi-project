@@ -19,18 +19,16 @@ import java.net.Socket;
 import com.robotemi.sdk.Robot;
 import com.robotemi.sdk.listeners.OnRobotReadyListener;
 import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener;
-import com.robotemi.sdk.listeners.OnMovementStatusChangedListener;
 import com.robotemi.sdk.TtsRequest;
 
-public class Activity4 extends AppCompatActivity implements OnRobotReadyListener, OnGoToLocationStatusChangedListener, OnMovementStatusChangedListener{
+public class Activity4 extends AppCompatActivity implements OnRobotReadyListener, OnGoToLocationStatusChangedListener{
     private static final String TAG = Activity4.class.getSimpleName();
     Button enterBtn, noChatBtn;
     Robot mRobot;
     private Handler handler;
-    private int obstacleCount = 0;
+    private String gotoStatus = "";
     private boolean isTimerRunning = false;
-    private final int TIME_PERIOD = 30000; // in 3 second
-    private final int OBSTACLE_THRESHOLD = 3; // 3 times
+    private final int TIME_PERIOD = 2000; // in 2 second
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +40,6 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
         Bundle bundle = this.getIntent().getExtras();
         String name = (String)bundle.getString("name");
         handler = new Handler();
-
-        mRobot.addOnMovementStatusChangedListener(this::onMovementStatusChanged);
 
         enterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +90,7 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
         super.onStart();
 
         // Add robot event listeners
+        Log.i(TAG, "Adding robot event listeners");
         mRobot.addOnRobotReadyListener(this);
         mRobot.addOnGoToLocationStatusChangedListener(this);
     }
@@ -117,6 +114,13 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
 
     @Override
     public void onGoToLocationStatusChanged(String location, String status, int descriptionId, String description) {
+        Log.i(TAG, "location status: "+status);
+        gotoStatus = status;
+        if(status.equals("obstacle detected")){
+            if(!isTimerRunning){
+                startTimer();
+            }
+        }
         if (descriptionId == 500) {
             Bundle bundle = this.getIntent().getExtras();
             String name = (String)bundle.getString("name");
@@ -135,39 +139,30 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
         }
     }
 
-    @Override
-    public void onMovementStatusChanged(String type, String status){
-        if(status.equals("obstacle detected")){
-            obstacleCount++;
-
-            if(!isTimerRunning){
-                startTimer();
-            }
-            if(obstacleCount >= OBSTACLE_THRESHOLD){
-                mRobot.speak(TtsRequest.create("有人要通過，請讓路，謝謝", false, TtsRequest.Language.ZH_TW));
-                resetObstacleCount();
-            }
-        }
-    }
-
     private void startTimer(){
         isTimerRunning = true;
-
+        Log.i(TAG, "Start 5-second-timer");
         handler.postDelayed(new Runnable(){
             public void run(){
-                resetObstacleCount();
+                isObstacleStillDetected();
             }
         }, TIME_PERIOD);
     }
 
-    private void resetObstacleCount(){
-        obstacleCount = 0;
-        isTimerRunning = false;
+    private void isObstacleStillDetected(){
+        if(gotoStatus.equals("obstacle detected")){
+            Log.i(TAG, "obstacle still detected after 5 seconds");
+            mRobot.speak(TtsRequest.create("有人要通過，請讓路，謝謝", false, TtsRequest.Language.ZH_TW));
+            startTimer();
+        }
+        else{
+            Log.i(TAG, "obstacle removed");
+            isTimerRunning = false;
+        }
     }
 
     protected void onDestroy(){
         super.onDestroy();
-        mRobot.removeOnMovementStatusChangedListener(this::onMovementStatusChanged);
         handler.removeCallbacksAndMessages(null);
     }
 
