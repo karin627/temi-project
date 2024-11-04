@@ -3,6 +3,8 @@ package com.example.temiapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,30 +17,40 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Arrays;
 
+import com.robotemi.sdk.NlpResult;
 import com.robotemi.sdk.Robot;
-import com.robotemi.sdk.listeners.OnRobotReadyListener;
-import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener;
+import com.robotemi.sdk.SttLanguage;
+import com.robotemi.sdk.constants.SdkConstants;
+import com.robotemi.sdk.listeners.*;
 import com.robotemi.sdk.TtsRequest;
+import com.robotemi.sdk.navigation.model.SpeedLevel;
 
-public class Activity4 extends AppCompatActivity implements OnRobotReadyListener, OnGoToLocationStatusChangedListener{
+public class Activity4 extends AppCompatActivity implements OnRobotReadyListener, OnGoToLocationStatusChangedListener, Robot.AsrListener {
     private static final String TAG = Activity4.class.getSimpleName();
     Button enterBtn, noChatBtn;
     Robot mRobot;
     private Handler handler;
     private String gotoStatus = "";
     private boolean isTimerRunning = false;
-    private final int TIME_PERIOD = 2000; // in 2 second
+    private final int DETECT_OBSTACLES_PERIOD = 2000; // in 2 second
+    private final int SPEED_PERIOD = 5000;
+    private String destination;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_4);
+
         mRobot = Robot.getInstance();
+        setAsrLanguages();
+
         enterBtn = (Button) findViewById(R.id.button_fourth);
         noChatBtn = (Button) findViewById(R.id.button_nochat);
         Bundle bundle = this.getIntent().getExtras();
         String name = (String)bundle.getString("name");
+        destination = (String)bundle.getString("destination");
         handler = new Handler();
 
         enterBtn.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +105,7 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
         Log.i(TAG, "Adding robot event listeners");
         mRobot.addOnRobotReadyListener(this);
         mRobot.addOnGoToLocationStatusChangedListener(this);
+        mRobot.addAsrListener(this);
     }
 
     @Override
@@ -102,6 +115,7 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
         // Remove robot event listeners
         mRobot.removeOnRobotReadyListener(this);
         mRobot.removeOnGoToLocationStatusChangedListener(this);
+        mRobot.removeAsrListener(this);
     }
 
     @Override
@@ -139,6 +153,39 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
         }
     }
 
+    @Override
+    public void onAsrResult(String asrResult, SttLanguage sttLanguage){
+        Log.i(TAG, "asrResult = " + asrResult + ", sttLanguage = " + sttLanguage);
+        try {
+            ApplicationInfo appInfo = getPackageManager().getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
+            if (appInfo.metaData == null){
+                Log.i(TAG, "appInfo.metaData == null");
+                return;
+            }
+            if (!mRobot.isSelectedKioskApp()){
+                Log.i(TAG, "not in kiosk mode");
+                return;
+            }
+            if (!appInfo.metaData.getBoolean(SdkConstants.METADATA_OVERRIDE_NLU)){
+                Log.i(TAG, "!appInfo.metaData.getBoolean(SdkConstants.METADATA_OVERRIDE_NLU)");
+                return;
+            }
+        } catch(PackageManager.NameNotFoundException e){
+            e.printStackTrace();
+            return;
+        }
+
+        if(asrResult.contains("快")){
+            Log.i(TAG, "speedup");
+            mRobot.stopMovement();
+            mRobot.goTo(destination, false, null, SpeedLevel.HIGH);
+            mRobot.speak(TtsRequest.create("加速中", false, TtsRequest.Language.ZH_TW));
+        }
+        else
+            mRobot.speak(TtsRequest.create("維持原速", false, TtsRequest.Language.ZH_TW));
+    }
+
+
     private void startTimer(){
         isTimerRunning = true;
         Log.i(TAG, "Start 5-second-timer");
@@ -146,7 +193,7 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
             public void run(){
                 isObstacleStillDetected();
             }
-        }, TIME_PERIOD);
+        }, DETECT_OBSTACLES_PERIOD);
     }
 
     private void isObstacleStillDetected(){
@@ -159,6 +206,16 @@ public class Activity4 extends AppCompatActivity implements OnRobotReadyListener
             Log.i(TAG, "obstacle removed");
             isTimerRunning = false;
         }
+    }
+
+    private void setAsrLanguages(){
+        if(!mRobot.isSelectedKioskApp()){
+            return;
+        }
+        int result = mRobot.setAsrLanguages(
+                Arrays.asList(SttLanguage.SYSTEM, SttLanguage.ZH_TW)
+        );
+        Log.i(TAG, "Asr languages: "+result);
     }
 
     protected void onDestroy(){
