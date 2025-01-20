@@ -1,5 +1,5 @@
 package com.example.temiapp
-
+// start chatting
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
@@ -19,6 +19,7 @@ import com.github.liuyueyi.quick.transfer.ChineseUtils
 import android.util.Log
 import android.inputmethodservice.InputMethodService
 import android.net.Uri
+import com.example.temiapp.recorder.RecorderStateOutput
 
 import com.robotemi.sdk.Robot
 import com.robotemi.sdk.listeners.OnRobotReadyListener
@@ -49,11 +50,10 @@ class InputMethodService2 : InputMethodService() {
     }
 }
 
-class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
+class Chat : AppCompatActivity(), OnRobotReadyListener, Robot.TtsListener {
     private enum class KeyboardStatus {
         Idle,             // Ready to start recording
         Recording,       // Currently recording
-//        Transcribing,    // Waiting for transcription results
     }
 
     // variables
@@ -63,10 +63,9 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
     private var recorderFsm: RecorderFSM? = null
     private var recordedAudioFilename: String = ""
     private val inputMethodService = InputMethodService()
-    private val TAG = ChatRecord::class.simpleName
+    private val TAG = Chat::class.simpleName
     private lateinit var labelStatus: TextView
     private lateinit var micButton: Button
-    private lateinit var enterBtn: Button
     private lateinit var mRobot: Robot
     private lateinit var backBtn: Button
     private lateinit var question: String
@@ -87,8 +86,9 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
         // Keyboard Status
         keyboardStatus = KeyboardStatus.Idle
         micButton = findViewById(R.id.button2)
-        labelStatus = findViewById(R.id.textView)
+        labelStatus = findViewById(R.id.textStatus)
         stopchat_btn = findViewById(R.id.stopBtn)
+        gpt_a = findViewById(R.id.textView)
         labelStatus.text = "按下錄音鍵，開始聊天吧"
 
         checkPermissions()
@@ -96,6 +96,12 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
         recorderManager = RecorderManager(this)
         recorderFsm = RecorderFSM(this)
         recordedAudioFilename = "${externalCacheDir?.absolutePath}/${RECORDED_AUDIO_FILENAME}"
+
+        gpt_a.text = "嗨，我是temi，今天過得如何?"
+//        setKeyboardStatus(KeyboardStatus.Recording)
+//        onStartRecording()
+
+        setupAmplitudeListener()
 
         micButton.setOnClickListener {
             // Upon button mic click...
@@ -111,21 +117,18 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
                     setKeyboardStatus(KeyboardStatus.Idle)
                     onStartTranscription()
                 }
-//                KeyboardStatus.Transcribing -> {
-//                    setKeyboardStatus(KeyboardStatus.Idle)
-//                }
             }
         }
 
         stopchat_btn.setOnClickListener {
-            val intent = Intent(this@ChatRecord, Activity6::class.java)
+            val intent = Intent(this@Chat, Activity6::class.java)
             b?.putString("question", question)
             intent.putExtras(b!!)
             startActivity(intent)
         }
 
         backBtn.setOnClickListener {
-            val intent = Intent(this@ChatRecord, Activity4::class.java)
+            val intent = Intent(this@Chat, Activity4::class.java)
             intent.putExtras(b!!)
             startActivity(intent)
         }
@@ -135,11 +138,13 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
     override fun onStart() {
         super.onStart()
         mRobot.addOnRobotReadyListener(this)
+        mRobot.addTtsListener(this)
     }
 
     override fun onStop() {
         super.onStop()
         mRobot.removeOnRobotReadyListener(this)
+        mRobot.removeTtsListener(this)
     }
 
     override fun onRobotReady(isReady: Boolean) {
@@ -178,10 +183,6 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
                 labelStatus!!.setText("聆聽中...")
                 micButton.setText("結束錄音")
             }
-//            KeyboardStatus.Transcribing -> {
-//                labelStatus!!.setText("請稍等...")
-//                micButton.setText("重新錄音")
-//            }
         }
         keyboardStatus = newStatus
     }
@@ -217,6 +218,27 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
                 Log.e(TAG, exceptionMessage)
             }
         )
+    }
+
+    private fun setupAmplitudeListener(){
+        recorderManager?.onUpdateMicrophoneAmplitude = {amplitude ->
+            Log.d("AmplitudeLogger", "Amplitude: $amplitude")
+            when(recorderFsm?.reportAmplitude(amplitude)){
+                RecorderStateOutput.Normal -> {
+
+                }
+                RecorderStateOutput.CancelRecording -> {
+                    setKeyboardStatus(KeyboardStatus.Idle)
+                    labelStatus.text = ""
+                }
+                RecorderStateOutput.FinishRecording -> {
+                    setKeyboardStatus(KeyboardStatus.Idle)
+                    onStartTranscription()
+                }
+
+                else -> {}
+            }
+        }
     }
 
     // The onClick event of the grant permission button.
@@ -290,9 +312,15 @@ class ChatRecord : AppCompatActivity(), OnRobotReadyListener {
         }
     }
 
+    override fun onTtsStatusChanged(ttsRequest: TtsRequest) {
+        if(ttsRequest.status == TtsRequest.Status.COMPLETED){
+            setKeyboardStatus(KeyboardStatus.Recording)
+            onStartRecording()
+        }
+    }
+
     private fun addResponse(response: String) {
         runOnUiThread {
-            gpt_a = findViewById(R.id.textView)
             addToChat(response, Message.SENT_BY_BOT)
             gpt_a.text = response
             mRobot.speak(TtsRequest.create(response, false, TtsRequest.Language.ZH_TW, false))

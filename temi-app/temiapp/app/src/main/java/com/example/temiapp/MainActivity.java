@@ -1,5 +1,5 @@
 package com.example.temiapp;
-
+// enter healthcare id
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.util.Log;

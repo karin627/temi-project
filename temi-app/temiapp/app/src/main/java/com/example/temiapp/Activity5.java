@@ -1,5 +1,5 @@
 package com.example.temiapp;
-
+// the end
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;

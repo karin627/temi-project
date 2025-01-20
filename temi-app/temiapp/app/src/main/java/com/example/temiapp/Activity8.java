@@ -1,5 +1,5 @@
 package com.example.temiapp;
-
+// press start button to start the guide
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,15 +34,22 @@ public class Activity8 extends AppCompatActivity implements OnRobotReadyListener
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mRobot.goTo("骨科診間", false, null, SpeedLevel.SLOW);
+                SpeedLevel speed = GlobalVariable.getInstance().getGlobalSpeedLevel();
+                Log.i(TAG, "the guidance speed is "+ speed.toString());
                 if(destination.equals("領藥處")){
-                    mRobot.goTo("領藥處", false, null, SpeedLevel.SLOW);
+                    mRobot.goTo("領藥處", false, null, speed);
                     Intent intent = new Intent(Activity8.this, Activity10.class);
                     intent.putExtras(bundle);
                     startActivity(intent);
                 }
+                else if (destination.equals("骨科")){
+                    mRobot.goTo("骨科診間", false, null, speed);
+                    Intent intent = new Intent(Activity8.this, Activity4.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
                 else{
-                    mRobot.goTo("骨科診間", false, null, SpeedLevel.SLOW);
+                    mRobot.goTo("腸胃科診間", false, null, speed);
                     Intent intent = new Intent(Activity8.this, Activity4.class);
                     intent.putExtras(bundle);
                     startActivity(intent);

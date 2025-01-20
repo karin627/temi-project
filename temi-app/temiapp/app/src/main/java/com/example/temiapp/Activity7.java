@@ -1,5 +1,5 @@
 package com.example.temiapp;
-
+// choose the next department
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,7 +33,7 @@ public class Activity7 extends AppCompatActivity implements OnRobotReadyListener
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Activity7.this, Activity8.class);
-                bundle.putString("destination", "骨科診間");
+                bundle.putString("destination", "骨科");
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -43,7 +43,7 @@ public class Activity7 extends AppCompatActivity implements OnRobotReadyListener
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Activity7.this, Activity8.class);
-                bundle.putString("destination", "腸胃科診間");
+                bundle.putString("destination", "腸胃科");
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

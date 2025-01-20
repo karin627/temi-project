@@ -26,7 +26,7 @@ class RecorderManager(context: Context) {
     }
 
     private var recorder: MediaRecorder? = null
-    private var onUpdateMicrophoneAmplitude: (Int) -> Unit = { }
+    var onUpdateMicrophoneAmplitude: (Int) -> Unit = { }
     private var microphoneAmplitudeUpdateJob: Job? = null
     private val amplitudeReportPeriod: Long
     private val context: Context
