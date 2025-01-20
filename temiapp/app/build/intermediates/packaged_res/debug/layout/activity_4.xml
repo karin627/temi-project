@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/four"
+    tools:context=".Activity4">
+
+    <Button
+        android:id="@+id/button_tooFast"
+        android:layout_width="299dp"
+        android:layout_height="108dp"
+        android:background="@drawable/button_style"
+        android:text="太快"
+        android:textColor="#076286"
+        android:textSize="50sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <Button
+        android:id="@+id/button_moderate"
+        android:layout_width="299dp"
+        android:layout_height="108dp"
+        android:background="@drawable/button_style"
+        android:text="剛剛好"
+        android:textColor="#076286"
+        android:textSize="50sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <Button
+        android:id="@+id/button_tooSlow"
+        android:layout_width="299dp"
+        android:layout_height="108dp"
+        android:background="@drawable/button_style"
+        android:text="太慢"
+        android:textColor="#076286"
+        android:textSize="50sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <!--    <Button-->
+<!--        android:id="@+id/button_fourth"-->
+<!--        android:layout_width="299dp"-->
+<!--        android:layout_height="108dp"-->
+<!--        android:background="@drawable/button_style"-->
+<!--        android:text="開始聊天"-->
+<!--        android:textColor="#076286"-->
+<!--        android:textSize="50sp"-->
+<!--        app:backgroundTint="@null"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.692"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.828" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button_nochat"-->
+<!--        android:layout_width="299dp"-->
+<!--        android:layout_height="108dp"-->
+<!--        android:background="@drawable/button_style"-->
+<!--        android:text="跳過聊天"-->
+<!--        android:textColor="#076286"-->
+<!--        android:textSize="50sp"-->
+<!--        app:backgroundTint="@null"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.326"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.828" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,254 @@
+[
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.temiapp-pngs-42:/drawable-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.temiapp-pngs-42:/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_intro.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_intro.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_seven.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/seven.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_intro.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/intro.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/navigation_main_navigation.xml.flat",
+        "source": "com.example.temiapp-main-48:/navigation/main_navigation.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_five_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/five_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_confirm_department.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_confirm_department.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_button_style_new.xml.flat",
+        "source": "com.example.temiapp-main-48:/drawable/button_style_new.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_firstpage.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/firstpage.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.temiapp-main-48:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_5.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_5.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_five.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/five.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_six.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/six.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_eight_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/eight_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_first_page.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_first_page.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_three.png.flat",
+        "source": "com.example.temiapp-main-48:/drawable/three.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.temiapp-pngs-42:/drawable-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_four.png.flat",
+        "source": "com.example.temiapp-main-48:/drawable/four.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_chat.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_chat.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_3.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_3.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.temiapp-main-48:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_eight.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/eight.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_6.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_6.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_intro_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/intro_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_10.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_10.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.temiapp-pngs-42:/drawable-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.temiapp-pngs-42:/drawable-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_button_style.xml.flat",
+        "source": "com.example.temiapp-main-48:/drawable/button_style.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_four_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/four_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_ten.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/ten.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_ask_chat.png.flat",
+        "source": "com.example.temiapp-main-48:/drawable/ask_chat.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_ask_chat.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_ask_chat.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_main.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/main.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_enter_symptom.png.flat",
+        "source": "com.example.temiapp-main-48:/drawable/enter_symptom.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.temiapp-pngs-42:/drawable-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_main.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_7.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_7.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_six_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/six_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_enter_symptom_whisper.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_enter_symptom_whisper.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/xml_backup_rules.xml.flat",
+        "source": "com.example.temiapp-main-48:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_8.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_8.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_ten_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/ten_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_three_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/three_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_seven_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/seven_template.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.temiapp-pngs-42:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.temiapp-main-48:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_4.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_4.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_confirm_department.png.flat",
+        "source": "com.example.temiapp-main-48:/drawable/confirm_department.png"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/layout_activity_chat_record.xml.flat",
+        "source": "com.example.temiapp-main-48:/layout/activity_chat_record.xml"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_chat.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/chat.jpg"
+    },
+    {
+        "merged": "com.example.temiapp-merged_res-46:/drawable_main_template.jpg.flat",
+        "source": "com.example.temiapp-main-48:/drawable/main_template.jpg"
+    }
+]

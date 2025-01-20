@@ -1,0 +1,258 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.temiapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+12-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:6:5-71
+12-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:6:22-68
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:7:5-81
+13-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+14-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:8:5-77
+14-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:8:22-74
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:9:5-76
+15-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:9:22-73
+16
+17    <permission
+17-->[androidx.core:core:1.9.0] C:\Users\Karin\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+18        android:name="com.example.temiapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.9.0] C:\Users\Karin\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.9.0] C:\Users\Karin\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.example.temiapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.9.0] C:\Users\Karin\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.9.0] C:\Users\Karin\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+23
+24    <application
+24-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:11:5-74:19
+25        android:allowBackup="true"
+25-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:12:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.9.0] C:\Users\Karin\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+27        android:dataExtractionRules="@xml/data_extraction_rules"
+27-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:13:9-65
+28        android:debuggable="true"
+29        android:extractNativeLibs="true"
+30        android:fullBackupContent="@xml/backup_rules"
+30-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:14:9-54
+31        android:icon="@mipmap/ic_launcher"
+31-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:15:9-43
+32        android:label="@string/app_name"
+32-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:16:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:17:9-54
+34        android:supportsRtl="true"
+34-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:18:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.TemiApp"
+36-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:19:9-45
+37        android:usesCleartextTraffic="true" >
+37-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:20:9-44
+38        <activity
+38-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:22:9-24:40
+39            android:name="com.example.temiapp.askChat"
+39-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:23:13-36
+40            android:exported="false" />
+40-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:24:13-37
+41        <activity
+41-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:25:9-27:40
+42            android:name="com.example.temiapp.EnterSymptomWhisper"
+42-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:26:13-48
+43            android:exported="false" />
+43-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:27:13-37
+44        <activity
+44-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:28:9-30:40
+45            android:name="com.example.temiapp.Chat"
+45-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:29:13-33
+46            android:exported="false" />
+46-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:30:13-37
+47        <activity
+47-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:31:9-33:40
+48            android:name="com.example.temiapp.Activity10"
+48-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:32:13-39
+49            android:exported="false" />
+49-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:33:13-37
+50        <activity
+50-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:34:9-36:40
+51            android:name="com.example.temiapp.Intro"
+51-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:35:13-34
+52            android:exported="false" />
+52-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:36:13-37
+53        <activity
+53-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:37:9-39:40
+54            android:name="com.example.temiapp.ConfirmDepartment"
+54-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:38:13-46
+55            android:exported="false" />
+55-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:39:13-37
+56        <activity
+56-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:40:9-42:40
+57            android:name="com.example.temiapp.Activity8"
+57-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:41:13-38
+58            android:exported="false" />
+58-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:42:13-37
+59        <activity
+59-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:43:9-45:40
+60            android:name="com.example.temiapp.Activity7"
+60-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:44:13-38
+61            android:exported="false" />
+61-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:45:13-37
+62        <activity
+62-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:46:9-48:40
+63            android:name="com.example.temiapp.Activity6"
+63-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:47:13-38
+64            android:exported="false" />
+64-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:48:13-37
+65        <activity
+65-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:49:9-51:40
+66            android:name="com.example.temiapp.Activity5"
+66-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:50:13-38
+67            android:exported="false" />
+67-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:51:13-37
+68        <activity
+68-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:52:9-54:40
+69            android:name="com.example.temiapp.Activity4"
+69-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:53:13-38
+70            android:exported="false" />
+70-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:54:13-37
+71        <activity
+71-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:55:9-57:40
+72            android:name="com.example.temiapp.Activity3"
+72-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:56:13-38
+73            android:exported="false" />
+73-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:57:13-37
+74        <activity
+74-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:58:9-60:40
+75            android:name="com.example.temiapp.MainActivity"
+75-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:59:13-41
+76            android:exported="false" />
+76-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:60:13-37
+77        <activity
+77-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:61:9-69:20
+78            android:name="com.example.temiapp.FirstPage"
+78-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:62:13-38
+79            android:exported="true" >
+79-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:63:13-36
+80            <intent-filter>
+80-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:64:13-68:29
+81                <action android:name="android.intent.action.MAIN" />
+81-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:65:17-69
+81-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:65:25-66
+82
+83                <category android:name="android.intent.category.LAUNCHER" />
+83-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:67:17-77
+83-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:67:27-74
+84            </intent-filter>
+85        </activity>
+86
+87        <meta-data
+87-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:71:9-73:48
+88            android:name="com.robotemi.sdk.metadata.SKILL"
+88-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:72:13-59
+89            android:value="@string/app_name" />
+89-->D:\project\third\obstacle_withoutButton_speed\20251225app\temiapp\app\src\main\AndroidManifest.xml:73:13-45
+90
+91        <provider
+91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Karin\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+92            android:name="androidx.startup.InitializationProvider"
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Karin\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+93            android:authorities="com.example.temiapp.androidx-startup"
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Karin\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+94            android:exported="false" >
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Karin\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+95            <meta-data
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Karin\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+96                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Karin\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+97                android:value="androidx.startup" />
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Karin\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+98            <meta-data
+98-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Karin\.gradle\caches\transforms-3\b1466cc17a6dcdf69625081e524827b8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+99                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+99-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Karin\.gradle\caches\transforms-3\b1466cc17a6dcdf69625081e524827b8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+100                android:value="androidx.startup" />
+100-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Karin\.gradle\caches\transforms-3\b1466cc17a6dcdf69625081e524827b8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+101            <meta-data
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+102                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+103                android:value="androidx.startup" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+104        </provider>
+105
+106        <uses-library
+106-->[androidx.window:window:1.0.0] C:\Users\Karin\.gradle\caches\transforms-3\d25d4aa5fb1a0f0d9ce1a49ad4b79938\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+107            android:name="androidx.window.extensions"
+107-->[androidx.window:window:1.0.0] C:\Users\Karin\.gradle\caches\transforms-3\d25d4aa5fb1a0f0d9ce1a49ad4b79938\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+108            android:required="false" />
+108-->[androidx.window:window:1.0.0] C:\Users\Karin\.gradle\caches\transforms-3\d25d4aa5fb1a0f0d9ce1a49ad4b79938\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+109        <uses-library
+109-->[androidx.window:window:1.0.0] C:\Users\Karin\.gradle\caches\transforms-3\d25d4aa5fb1a0f0d9ce1a49ad4b79938\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+110            android:name="androidx.window.sidecar"
+110-->[androidx.window:window:1.0.0] C:\Users\Karin\.gradle\caches\transforms-3\d25d4aa5fb1a0f0d9ce1a49ad4b79938\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+111            android:required="false" />
+111-->[androidx.window:window:1.0.0] C:\Users\Karin\.gradle\caches\transforms-3\d25d4aa5fb1a0f0d9ce1a49ad4b79938\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+112
+113        <provider
+113-->[com.robotemi:sdk:0.10.81] C:\Users\Karin\.gradle\caches\transforms-3\b3c1c3f1574ae8f94b378acd7d48b2c6\transformed\sdk-0.10.81\AndroidManifest.xml:14:9-18:40
+114            android:name="com.robotemi.sdk.TemiSdkContentProvider"
+114-->[com.robotemi:sdk:0.10.81] C:\Users\Karin\.gradle\caches\transforms-3\b3c1c3f1574ae8f94b378acd7d48b2c6\transformed\sdk-0.10.81\AndroidManifest.xml:15:13-67
+115            android:authorities="com.example.temiapp.com.robotemi.sdk"
+115-->[com.robotemi:sdk:0.10.81] C:\Users\Karin\.gradle\caches\transforms-3\b3c1c3f1574ae8f94b378acd7d48b2c6\transformed\sdk-0.10.81\AndroidManifest.xml:16:13-68
+116            android:enabled="true"
+116-->[com.robotemi:sdk:0.10.81] C:\Users\Karin\.gradle\caches\transforms-3\b3c1c3f1574ae8f94b378acd7d48b2c6\transformed\sdk-0.10.81\AndroidManifest.xml:17:13-35
+117            android:exported="false" />
+117-->[com.robotemi:sdk:0.10.81] C:\Users\Karin\.gradle\caches\transforms-3\b3c1c3f1574ae8f94b378acd7d48b2c6\transformed\sdk-0.10.81\AndroidManifest.xml:18:13-37
+118
+119        <receiver
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+120            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+121            android:directBootAware="false"
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+122            android:enabled="true"
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+123            android:exported="true"
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+124            android:permission="android.permission.DUMP" >
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+125            <intent-filter>
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+126                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+127            </intent-filter>
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+129                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+130            </intent-filter>
+131            <intent-filter>
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+132                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+133            </intent-filter>
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+135                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Karin\.gradle\caches\transforms-3\c70309ac4172ba14e74f435e091b28c9\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+136            </intent-filter>
+137        </receiver>
+138    </application>
+139
+140</manifest>
