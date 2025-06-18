@@ -52,5 +52,7 @@ Please run recommendation script on the computer in the lobby, and run notificat
 For the detailed implementation of this system, please refer to the following introduction videos. 
 
 Chinese version: https://youtu.be/zplzpIBm27I
+                　https://youtu.be/TtRmCFeIK4k?si=opC8G1f5JgHKkXP5
 
 English version: https://youtu.be/92ZnYM7VFg0
+                　https://youtu.be/8Q8VgiMOtjI?si=wdcsn-G-fP0hBQbz
